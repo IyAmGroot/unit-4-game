@@ -27,13 +27,9 @@ for (var i = 0; i < character.length; i++) {
 
 $(document).ready(function() {
   $(".freeAgent").on("click", function() {
-    var x = $(this).attr("alt");
-    console.log(x);
-    console.log(characters[0]);
-    console.log(character.indexOf(x));
-    hero = characters[character.indexOf(x)];
-    alert(hero.name);
-    hero.clear();
-    alert(hero.name);
+    $(".hero").attr("src", $(this).attr("src"));
+    $(this).addClass("hide assigned");
+    $(this).removeClass("freeAgent");
+    $(".bullPen").append($(".freeAgent"));
   });
 });

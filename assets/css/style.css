@@ -35,9 +35,10 @@ vs {
   color: gold;
   text-align: center;
 }
-.freeAgent {
-  width: 15%;
-  height: 15%;
+.freeAgent,
+.bullPen {
+  width: 10%;
+  height: 100%;
   display: inline-block;
   margin: 10px 10px 10px 0;
 }
@@ -72,4 +73,7 @@ vs {
 .battlegroundName {
   text-align: center;
   border: 5px solid purple;
+}
+.hide {
+  display: none;
 }
