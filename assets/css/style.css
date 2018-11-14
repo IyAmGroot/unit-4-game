@@ -1,0 +1,75 @@
+@font-face {
+  font-family: "Star Jedi";
+  src: url("css/fonts/StarJedi.ttf") format("truetype");
+}
+h1 {
+  font-family: "Star Jedi";
+  background-color: transparent;
+}
+.text1 {
+  font-family: "Orbitron", sans-serif;
+}
+.white {
+  color: #fff;
+}
+
+html {
+  background-image: url(../images/dv1920x1080.jpg);
+  background-size: cover;
+  background-repeat: none;
+  overflow: hidden;
+}
+.topRow {
+  text-align: center;
+}
+body {
+  background: none;
+}
+vs {
+  font-size: 200%;
+}
+.container-fluid {
+  margin-top: 0;
+  width: 400px;
+  background: none;
+  color: gold;
+  text-align: center;
+}
+.freeAgent {
+  width: 15%;
+  height: 15%;
+  display: inline-block;
+  margin: 10px 10px 10px 0;
+}
+
+.align-items-center {
+  -ms-flex-align: center !important;
+  align-items: center !important;
+}
+.d-flex {
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.hero,
+.villain {
+  width: 75%;
+
+  margin: 10px 10px 10px 0;
+  vertical-align: middle;
+}
+.hero {
+  border: 10px solid green;
+}
+.villain {
+  border: 10px solid red;
+}
+.container {
+  background-color: color #353541bf;
+  height: 1200px;
+  width: 100%;
+}
+.battlegroundName {
+  text-align: center;
+  border: 5px solid purple;
+}
