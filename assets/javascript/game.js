@@ -1,4 +1,4 @@
-/***************VARIABLES*************/
+/*************** VARIABLES *************/
 
 var charNames = ["Rey", "Luke", "Darth Vader", "Emperor Palpatine"];
 var charId = ["rey", "luke", "vader", "palpatine"];
