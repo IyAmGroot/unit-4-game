@@ -16,107 +16,137 @@
       href="https://fonts.googleapis.com/css?family=Orbitron"
       rel="stylesheet"
     />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Graduate"
+      rel="stylesheet"
+    />
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js" crossorigin="anonymous"
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+      crossorigin="anonymous"
     ></script>
   </head>
   <body>
     <div class="container-fluid">
-      <div class="row"><h1>Star Wars</h1></div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-6 white text1"><h2>Select a Character</h2></div>
-            <div class="col-md-6 white text1"><h2>Enemies</h2></div>
+      <div class="row">
+        <div
+          class="col-md-12 d-flex flex-column align-items-center justify-content-center"
+        >
+          <h1>Star Wars</h1>
+          <h3>The Bootcamp Disagreement</h3>
         </div>
-      
-        <div class="row">
-            <div class="row col-md-12">
-                <img class="freeAgent" src="assets/images/Rey_TLJ.png" alt="Rey" />
-                <img
-                    class="freeAgent"
-                    src="assets/images/Lukeskywalker.jpg"
-                    alt="Luke"
-                />
-                <img
-                    class="freeAgent"
-                    src="assets/images/vader.jpg"
-                    alt="Darth Vader"
-                />
-                <img
-                    class="freeAgent"
-                    src="assets/images/emperorPalp.jpg"
-                    alt="Emperor Palpatine"
-                />
-            </div>
-            <div class="col-md-6 bullPen">
-
-            </div>
-        </div>
-     
-      
-      <div id="battlegroundText" class="row col-md-12 white text1">
-        <h2>Battleground</h2>
       </div>
-      <div class="row matchup">
-        <div id="heroDiv" class="battlegroundName col-md-5">
+      <div class="row">
+        <div
+          class="col-md-12 d-flex flex-column align-items-center justify-content-center"
+        >
+          <button id="startBtn" type="button" class="btn btn-danger">
+            Welcome! Click to Begin!
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="container hide">
+      <div class="row ">
+        <div class="col-md-6 white text1">
+          <h2><span id="charSelect">Select a Character</span></h2>
+        </div>
+        <div class="col-md-6 white text1"><h2>Enemies</h2></div>
+      </div>
+
+      <div class="row">
+        <div id="holding" class="col-md-6">
           <img
-            class="hero"
-            src="assets/images/heroPH.png"
+            id="rey"
+            class="freeAgent"
+            src="assets/images/Rey_TLJ.png"
             alt="Rey"
           />
+          <img
+            id="luke"
+            class="freeAgent"
+            src="assets/images/Lukeskywalker.jpg"
+            alt="Luke"
+          />
+          <img
+            id="vader"
+            class="freeAgent"
+            src="assets/images/vader.jpg"
+            alt="Darth Vader"
+          />
+          <img
+            id="palpatine"
+            class="freeAgent"
+            src="assets/images/emperorPalp.jpg"
+            alt="Emperor Palpatine"
+          />
+        </div>
+        <div id="bullPen" class="col-md-6"></div>
+      </div>
+
+      <div
+        id="battlegroundText"
+        class="row col-md-12 white text1 d-flex align-items-center justify-content-center"
+      >
+        <h2>Battleground</h2>
+      </div>
+      <div class=" row matchup">
+        <div id="heroDiv" class=" battlegroundName col-md-5">
+          <img class="hero" src="assets/images/heroPH.png" alt="hero" />
         </div>
 
-        <div class="battlegroundName col-md-2 d-flex align-items-center">
+        <div
+          class=" battlegroundName col-md-2 d-flex align-items-center justify-content-center"
+        >
           <h3 id="vs" class="white text1">VS</h3>
         </div>
-        <div class="battlegroundName col-md-5">
+        <div class=" battlegroundName col-md-5">
           <img
             class="villain"
             src="assets/images/villainPH.png"
-            alt="Darth Vader"
+            alt="villain"
           />
         </div>
       </div>
       <div class="row">
-          <div class="battlegroundName col-md-5 white text1">
-            <h4><span id="spanHero">Test </span><span id="spanHeroHP"></span>80</h4>
-          </div>
-        <div class="col-md-2">
-          <button id="startBtn" type="button" class="btn btn-light">
+        <div class="battlegroundName col-md-5 white text1">
+          <h4><span id="spanHero"> </span><span id="spanHeroHP"></span></h4>
+        </div>
+        <div class="col-md-2 d-flex align-items-center justify-content-center">
+          <button id="atkBtn" type="button" class="btn btn-light">
             Attack
           </button>
-          <button id="startBtn" type="button" class="btn btn-light">
+          <button id="restartBtn" type="button" class="btn btn-light" disabled>
             Restart
           </button>
         </div>
         <div class="battlegroundName col-md-5 white text1">
-            <h4><span id="spanVillain">Test </span><span id="spanVillainHP">50</span></h4>
+          <h4>
+            <span id="spanVillain"> </span><span id="spanVillainHP"></span>
+          </h4>
         </div>
       </div>
-      <div class="row">
-        <div class="col-md-6 text1 white">
-          <span id="heroAttacks"><h4>Hero attacks, villain loses 6 HP</h4>
-            </span>
+      <div class="row d-flex align-items-center justify-content-center">
+        <div
+          class="col-md-5 text1 white d-flex align-items-center justify-content-center"
+        >
+          <span id="heroAttacks"><h4></h4></span>
         </div>
-        <div class="col-md-6 text1 white">
-            <span id="villainAttacks"><h4>Hero attacks, villain loses 15 HP</h4></span>
-            </div>
+        <div
+          class="col-md-2 text1 white d-flex align-items-center justify-content-center"
+        ></div>
+        <div
+          class="col-md-5 text1 white d-flex align-items-center justify-content-center"
+        >
+          <span id="villainAttacks"><h4></h4></span>
         </div>
       </div>
     </div>
 
     <script src="assets/javascript/game.js"></script>
-
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-      integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
-      integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
-      crossorigin="anonymous"
-    ></script>
   </body>
 </html>
