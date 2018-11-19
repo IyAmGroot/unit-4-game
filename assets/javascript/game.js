@@ -16,6 +16,7 @@ var gameOver = false;
 var audio = new Audio("assets/sounds/sabreClash.wav");
 var openingAudio = new Audio("assets/sounds/star-wars-theme-song.mp3");
 var battleAudio = new Audio("assets/sounds/DuelOfTheFates.mp3");
+var twirlAudio = new Audio("assets/sounds/sthtwrl1.wav");
 var decrementer = 25;
 var intervalId;
 var villainCount = 0;
@@ -148,6 +149,10 @@ $(document).ready(function() {
     $("#spanVillainHP").html(villainHP.toString());
     if (villainHP <= 0) {
       //Villain dispatched
+      setTimeout(function() {
+        twirlAudio.play();
+      }, 1000);
+
       wins++;
       if (wins < 3) {
         //Update Span, game still on
@@ -162,6 +167,7 @@ $(document).ready(function() {
         $(".villain").addClass("defeated");
       } else {
         //Third villain defeated, game over
+        $(".freeAgent[id='" + villain.getId() + "']").addClass("hide");
         $(".villain").addClass("defeated");
         $("#villainAttacks").html(
           hero.getName() +
@@ -177,7 +183,7 @@ $(document).ready(function() {
         setTimeout(function() {
           audio.src = "assets/sounds/force.mp3";
           audio.play();
-        }, 1000);
+        }, 2000);
       }
       gameOver = true;
     } else {
